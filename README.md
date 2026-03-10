@@ -1,73 +1,167 @@
-# React + TypeScript + Vite
+# 🎮 Avatar Dress-Up Game (React + TypeScript + Tailwind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customizable avatar dress-up web application where users can create their own character by selecting different hairstyles, body types, shoes, accessories, and backgrounds.
 
-Currently, two official plugins are available:
+This project was built using **React, TypeScript, and Tailwind CSS** to demonstrate modern frontend development practices such as component-based architecture, state management, and UI layering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# 📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<img width="1536" height="1024" alt="ChatGPT Image Mar 10, 2026, 04_02_11 PM" src="https://github.com/user-attachments/assets/0d742192-927a-48f1-9deb-4dea9eedde7e" />
 
-## Expanding the ESLint configuration
+Features include:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Character customization
+* Category-based item selection
+* Layered avatar rendering
+* Reset functionality
+* Background scenes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 🚀 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* **React**
+* **TypeScript**
+* **Tailwind CSS**
+* **Vite / Create React App**
+* **Component-based architecture**
+
+---
+
+# 📁 Project Structure
+
+```
+src
+ ├ components
+ │   ├ Avatar.tsx
+ │   └ ItemGrid.tsx
+ │
+ ├ App.tsx
+ └ main.tsx
+
+public
+ └ assets
+    ├ body
+    ├ clothes
+    ├ hair
+    ├ shoes
+    ├ accessories
+    └ background
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 🧠 How It Works
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The avatar is built using **layered images** stacked using CSS positioning.
+
+Avatar layers:
+
 ```
+Background
+   ↓
+Body
+   ↓
+Clothes
+   ↓
+Shoes
+   ↓
+Hair
+   ↓
+Accessories
+```
+
+Each layer is dynamically updated using **React state**.
+
+Example:
+
+```tsx
+const [hair, setHair] = useState("hair1.png");
+```
+
+When the user clicks an item in the clothing grid, the state updates and the avatar re-renders instantly.
+
+---
+
+# 🎨 Features
+
+### Avatar Customization
+
+Users can change:
+
+* Hair styles
+* Body types
+* Shoes
+* Accessories
+* Background scenes
+
+### Item Selection Grid
+
+Items are displayed in a responsive grid and can be selected with a click.
+
+### Reset Character
+
+Reset the avatar to default items.
+
+---
+
+# 🛠 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/avatar-dressup-game.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd avatar-dressup-game
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+# 🌟 Future Improvements
+
+Planned features include:
+
+* 🎲 Random outfit generator
+* 💾 Export avatar as PNG
+* 🎨 Color picker for clothing
+* 📱 Mobile responsive layout
+* 🖱 Drag & drop clothing system
+* 🎭 More character customization options
+
+---
+
+# 📚 Learning Goals
+
+This project was built to practice:
+
+* React component design
+* TypeScript type safety
+* Tailwind CSS layout systems
+* Managing UI state in React
+* Building interactive user interfaces
+
+---
+
+# 👨‍💻 Author
+
+Created by **Thembelihle Maluka**
+Aspiring Full-Stack Developer
+
