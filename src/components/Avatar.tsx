@@ -2,16 +2,20 @@
 
 type AvatarProps = {
   body: string
+  clothes : string
   hair: string
   shoes: string
   accessory: string
+  
 }
 
 export default function Avatar({
   body,
+  clothes,
   hair,
   shoes,
   accessory,
+
 }: AvatarProps) {
 
   return (
@@ -29,6 +33,9 @@ export default function Avatar({
     >
 
       {/* BODY */}
+
+     
+
       <img
         src={`/assets/body/${body}`}
         className="absolute top-0 left-0 w-full"
@@ -36,6 +43,11 @@ export default function Avatar({
       />
 
       {/* Clothes */}
+       <img src={`/assets/clothes/${clothes}`}
+       alt="clothes"
+       className="absolute top-0 left-0 w-full"
+       />
+
 
       {/* SHOES */}
       <img
