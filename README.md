@@ -112,13 +112,7 @@ Reset the avatar to default items.
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/avatar-dressup-game.git
-```
-
-Navigate to the project folder:
-
-```bash
-cd avatar-dressup-game
+git clone https://github.com/ThembelihleQueeneth/avatar-dressup-game.git
 ```
 
 Install dependencies:
