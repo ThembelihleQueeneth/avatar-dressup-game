@@ -52,7 +52,7 @@ export default function Avatar({
       {/* ACCESSORIES */}
       <img
         src={`/assets/accessories/${accessory}`}
-        className="absolute top-0 left-0 w-full"
+        className="absolute top-20 left-33 w-10 h-10"
         alt="accessory"
       />
 
