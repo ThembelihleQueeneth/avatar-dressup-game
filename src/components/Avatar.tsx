@@ -35,10 +35,12 @@ export default function Avatar({
         alt="body"
       />
 
+      {/* Clothes */}
+
       {/* SHOES */}
       <img
         src={`/assets/shoes/${shoes}`}
-        className="absolute top-0 left-0 w-20 h-20"
+        className="absolute bottom-6 left-19 w-54 h-35"
         alt="shoes"
       />
 
