@@ -21,7 +21,7 @@ export default function ItemGrid({
         <div
           key={item}
           onClick={() => onSelect(item)}
-          className="cursor-pointer bg-pink-100 p-2 rounded-lg hover:bg-pink-200 transition"
+          className="cursor-pointer bg-pink-100 p-2 rounded-lg hover:bg-pink-200 transition cursor-pointer"
         >
 
           <img

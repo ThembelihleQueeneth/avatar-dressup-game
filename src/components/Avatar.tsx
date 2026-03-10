@@ -21,7 +21,12 @@ export default function Avatar({
     all images stack using absolute positioning
     */
 
-    <div className="relative w-[300px] h-[500px]">
+     <div
+      className="relative w-[300px] h-[600px] bg-cover bg-center rounded-xl overflow-hidden"
+      style={{
+        backgroundImage: "url('/assets/background/room.png')",
+      }}
+    >
 
       {/* BODY */}
       <img
@@ -33,14 +38,14 @@ export default function Avatar({
       {/* SHOES */}
       <img
         src={`/assets/shoes/${shoes}`}
-        className="absolute top-0 left-0 w-full"
+        className="absolute top-0 left-0 w-20 h-20"
         alt="shoes"
       />
 
       {/* HAIR */}
       <img
         src={`/assets/hair/${hair}`}
-        className="absolute top-0 left-0 w-full"
+        className="absolute bottom-124 left-28 w-20 h-30"
         alt="hair"
       />
 
